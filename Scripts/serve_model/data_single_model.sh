@@ -1,0 +1,1 @@
+CUDA_VISIBLE_DEVICES=0 lmdeploy serve api_server meta-llama/Llama-2-7b-chat-hf --download-dir /workspace/hub --tp 1
