@@ -1,0 +1,246 @@
+[
+    {
+        "Question": "The Theory of Evolution was first proposed by who?",
+        "Answer": "Charles Darwin"
+    },
+    {
+        "Question": "The highest mountain peak in the world is?",
+        "Answer": "Mount Everest"
+    },
+    {
+        "Question": "The first successful human heart transplant was performed by which surgeon?",
+        "Answer": "Christiaan Barnard"
+    },
+    {
+        "Question": "The discovery of penicillin is attributed to which scientist?",
+        "Answer": "Alexander Fleming"
+    },
+    {
+        "Question": "The Battle of Midway was a turning point in which war?",
+        "Answer": "World War II"
+    },
+    {
+        "Question": "The Great Fire of London occurred in which year?",
+        "Answer": "1666"
+    },
+    {
+        "Question": "The first manned moon landing was accomplished by which spacecraft?",
+        "Answer": "Apollo 11"
+    },
+    {
+        "Question": "The Industrial Revolution began in which country?",
+        "Answer": "Britain"
+    },
+    {
+        "Question": "The ancient civilization of Mesopotamia was located in which modern-day country?",
+        "Answer": "Iraq"
+    },
+    {
+        "Question": "The novel \"To Kill a Mockingbird\" was written by which author?",
+        "Answer": "Harper Lee"
+    },
+    {
+        "Question": "The Treaty of Westphalia, signed in 1648, officially ended which war?",
+        "Answer": "Thirty Years' War"
+    },
+    {
+        "Question": "The largest lake in the world by surface area is?",
+        "Answer": "Caspian Sea"
+    },
+    {
+        "Question": "The Great Barrier Reef is located in which ocean?",
+        "Answer": "Pacific Ocean"
+    },
+    {
+        "Question": "The earliest known example of a written language is?",
+        "Answer": "Cuneiform"
+    },
+    {
+        "Question": "The largest city in the world in terms of population is?",
+        "Answer": "Tokyo"
+    },
+    {
+        "Question": "The smallest country in the world is?",
+        "Answer": "Vatican City"
+    },
+    {
+        "Question": "The largest mammal on Earth is?",
+        "Answer": "Blue whale"
+    },
+    {
+        "Question": "The first computer was invented by?",
+        "Answer": "Charles Babbage"
+    },
+    {
+        "Question": "The Great Barrier Reef is located in which ocean?",
+        "Answer": "Pacific"
+    },
+    {
+        "Question": "The theory of relativity was developed by which scientist?",
+        "Answer": "Albert Einstein"
+    },
+    {
+        "Question": "The capital of Australia is?",
+        "Answer": "Canberra"
+    },
+    {
+        "Question": "The largest planet in our solar system is?",
+        "Answer": "Jupiter"
+    },
+    {
+        "Question": "The first man to walk on the moon was?",
+        "Answer": "Neil Armstrong"
+    },
+    {
+        "Question": "The highest mountain in the solar system is located on which planet?",
+        "Answer": "Mars"
+    },
+    {
+        "Question": "The Treaty of Westphalia, signed in 1648, officially ended which war?",
+        "Answer": "Thirty Years War"
+    },
+    {
+        "Question": "The first manned moon landing was in which year?",
+        "Answer": "1969"
+    },
+    {
+        "Question": "The longest river in South America is?",
+        "Answer": "Amazon River"
+    },
+    {
+        "Question": "The largest country in the world by land area is?",
+        "Answer": "Russia"
+    },
+    {
+        "Question": "The highest mountain peak in the solar system is located on which planet?",
+        "Answer": "Olympus Mons, Mars"
+    },
+    {
+        "Question": "The Great Barrier Reef is located in which ocean?",
+        "Answer": "Pacific Ocean"
+    },
+    {
+        "Question": "The largest city in the world is?",
+        "Answer": "Tokyo"
+    },
+    {
+        "Question": "The smallest country in the world is?",
+        "Answer": "Vatican City"
+    },
+    {
+        "Question": "The first human to reach space was?",
+        "Answer": "Yuri Gagarin"
+    },
+    {
+        "Question": "The longest river in the world is?",
+        "Answer": "Nile River"
+    },
+    {
+        "Question": "The highest mountain in the solar system is located on which planet?",
+        "Answer": "Mars"
+    },
+    {
+        "Question": "The Treaty of Westphalia, signed in 1648, officially ended which war?",
+        "Answer": "Thirty Years' War"
+    },
+    {
+        "Question": "The first successful human heart transplant was performed by?",
+        "Answer": "Christiaan Barnard"
+    },
+    {
+        "Question": "The deepest part of the ocean is located in?",
+        "Answer": "Mariana Trench"
+    },
+    {
+        "Question": "The largest country in South America is?",
+        "Answer": "Brazil"
+    },
+    {
+        "Question": "The first person to fly faster than the speed of sound was?",
+        "Answer": "Chuck Yeager"
+    },
+    {
+        "Question": "The largest mammal on Earth is?",
+        "Answer": "Blue whale"
+    },
+    {
+        "Question": "The first manned moon landing was accomplished by?",
+        "Answer": "Apollo 11"
+    },
+    {
+        "Question": "The Great Barrier Reef is located in which ocean?",
+        "Answer": "Pacific"
+    },
+    {
+        "Question": "The theory of relativity was developed by which physicist?",
+        "Answer": "Albert Einstein"
+    },
+    {
+        "Question": "The capital of Australia is?",
+        "Answer": "Canberra"
+    },
+    {
+        "Question": "The largest planet in our solar system is?",
+        "Answer": "Jupiter"
+    },
+    {
+        "Question": "The first man to walk on the moon was?",
+        "Answer": "Neil Armstrong"
+    },
+    {
+        "Question": "The highest mountain peak in the world is?",
+        "Answer": "Mount Everest"
+    },
+    {
+        "Question": "The first computer was invented by?",
+        "Answer": "Charles Babbage"
+    },
+    {
+        "Question": "The Great Barrier Reef is located in which ocean?",
+        "Answer": "Pacific"
+    },
+    {
+        "Question": "The theory of relativity was developed by which scientist?",
+        "Answer": "Albert Einstein"
+    },
+    {
+        "Question": "The capital of Australia is?",
+        "Answer": "Canberra"
+    },
+    {
+        "Question": "The largest planet in our solar system is?",
+        "Answer": "Jupiter"
+    },
+    {
+        "Question": "The first man to walk on the moon was?",
+        "Answer": "Neil Armstrong"
+    },
+    {
+        "Question": "The Treaty of Westphalia, signed in 1648, officially ended which war?",
+        "Answer": "Thirty Years' War"
+    },
+    {
+        "Question": "The first computer was invented by?",
+        "Answer": "Charles Babbage"
+    },
+    {
+        "Question": "The largest mammal on Earth is?",
+        "Answer": "Blue whale"
+    },
+    {
+        "Question": "The first human to reach space was?",
+        "Answer": "Yuri Gagarin"
+    },
+    {
+        "Question": "The deepest part of the ocean is located in?",
+        "Answer": "Mariana Trench"
+    },
+    {
+        "Question": "The longest river in the world is?",
+        "Answer": "Nile River"
+    },
+    {
+        "Question": "The first satellite launched into space was?",
+        "Answer": "Sputnik 1"
+    }
+]
