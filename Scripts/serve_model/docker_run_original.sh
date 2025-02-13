@@ -1,0 +1,1 @@
+docker run -it --gpus all  --env "HUGGING_FACE_HUB_TOKEN=<secret>" --env "OPENAI_API_KEY=<Secret>"  -p 23333:23333  --ipc=host --name NAME "<DockerIMG>"

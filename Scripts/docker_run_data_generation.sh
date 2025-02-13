@@ -1,0 +1,1 @@
+docker run -it --env "OPENAI_API_KEY=<SECRET>" --env "HUGGING_FACE_HUB_TOKEN=<SECRET>" --gpus all "<DOCKERIMG>"

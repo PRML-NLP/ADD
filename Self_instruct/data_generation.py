@@ -96,6 +96,9 @@ def main(args):
     meta_agent = MetaAgent(
         use_openai=args.use_openai,
         model_name=args.model_name,
+        top_k=args.top_k,
+        top_p=args.top_p,
+        max_tokens=args.max_tokens,
         url=args.openai_base,
         system_prompt= dataset_system_prompt 
     )
@@ -112,41 +115,42 @@ def main(args):
     unique_qa = ori_qa
     for u in unique_qa:
         if args.dataset_name == "hotpotqa":
-            answer_set.add(u["Answer"])
+            answer_set.add(u["Answer"]) # answer 모음집, set이므로 순서 상관없이 무작위
 
     iteration = 0
-    while(len(answer_set)<args.generate_all_num):
-        print(f"{args.generate_per_round_num}x{iteration} iteration, have generated num {len(answer_set)}, all {args.generate_all_num} need to be generated all")
+    while(len(answer_set)<args.generate_all_num): # 원하는 목표치만치 데이터 샘플 생성성
+        print(f"**{args.generate_per_round_num}x{iteration} iteration, have generated num {len(answer_set)}, all {args.generate_all_num} need to be generated all**")
         all_qa=""
+
+
         # max 5 examples
-        sample_pairs=get_random_data(ori_qa,num_samples=2)+get_random_data(unique_qa,num_samples=min(3,len(unique_qa)))
+        sample_pairs=get_random_data(ori_qa,num_samples=2)+get_random_data(unique_qa,num_samples=min(3,len(unique_qa))) # 기본 original samples과 positive/negative samples
         random.shuffle(sample_pairs)
 
-        for qa in sample_pairs:
-            all_qa+=str(qa)[1:-1]+"\n"
-        human_prompt_args = {"QA_pairs":all_qa,"Gen_num":args.generate_per_round_num}
+        for qa in sample_pairs: # qa = {"Question":question, "Answer": answer}
+            all_qa+=str(qa)[1:-1]+"\n" 
+        human_prompt_args = {"QA_pairs":all_qa,"Gen_num":args.generate_per_round_num} # {"QA_pars":"Question":question, "Answer": answer\n"Question":question, "Answer": answer\n,"Gen_num":3}
         human_prompt_template = HOTPOTQA_DATA_GEN_HUMAN_PROMPT if args.dataset_name == "hotpotqa" else SCIENCEQA_DATA_GEN_HUMAN_PROMPT
-        output = meta_agent.generate(
+        output = meta_agent.gen(
             human_prompt_template=human_prompt_template,
             human_prompt_args=human_prompt_args,
-            # temprature=random.uniform(0.1, 0.5),
-            # top_k=args.top_k,
-            # top_p=args.top_p,
-            # max_tokens=args.max_tokens,
+            temperature=random.uniform(0.5, 0.9),
             update_prompt=False
         )
         iteration += 1
         
         data_list = []
         if(args.dataset_name == "hotpotqa"):
-            for new_pair in parse_ouput_hotpotqa(output):
+            
+
+
+            for idx, new_pair in enumerate(parse_ouput_hotpotqa(output)):
                 # print(new_pair,'\n')
-                
                 template = f"Question: {new_pair['Question']}\n Answer: {new_pair['Answer']}"
                 messages = [{"role":"system", "content": FILTERING_PROMPT}, {"role":"user", "content": template}]
                 chat_completion = ChatOpenAI(model="gpt-4o")
                 ret = chat_completion.invoke(messages).content
-                print(ret)
+                print(f"{idx+1}번째:", ret)
                 correctness = True if ret == "True" or ret == "true" else False
                 
                 if new_pair["Answer"] not in answer_set and len(new_pair["Answer"])<20 and correctness:
@@ -170,7 +174,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--model_name", type=str, default="meta-llama/Llama-2-7b-chat-hf")
     parser.add_argument("--source_data", type=str, default="/workspace/Self_instruct/Meta_sample/Meta_Hotpotqa.json")
-    parser.add_argument("--generate_all_num", type=int, default=10)
+    parser.add_argument("--generate_all_num", type=int, default=40)
     parser.add_argument("--generate_per_round_num", type=int, default=10)
     parser.add_argument("--target_data",type=str,default="/workspace/generated_qa.json")
     parser.add_argument("--dataset_name", type=str, default="hotpotqa")
