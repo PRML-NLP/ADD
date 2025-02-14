@@ -18,3 +18,9 @@ sh ./Scripts/serve_model/original.sh
 ```
 sh ./Scripts/data_generation.sh
 ```
+
+### Trajectories Synthesis
+
+```
+sh ./Scripts/run_task.sh
+```
