@@ -21,12 +21,12 @@ class MetaAgent:
     def __init__(
         self,
         model_name: str,
-        top_k:int=40, # 최대 몇개의 samples를 만들 것인가?
+        top_k:int=40, 
         top_p:float=0.75, # 얼마나 신뢰도 높은 것들을 허용할 것인가?
         max_tokens=5,
         use_openai:bool = False,
         openai_key: str = "EMPTY",
-        url: str = "http://localhost:23333/v1",
+        url: str = "http://172.17.0.1:23333/v1",
         system_prompt: str = None
     ):
         self.key = openai_key
@@ -46,14 +46,13 @@ class MetaAgent:
         if self.use_openai:
             self.open_api_base="https://api.openai.com/v1"
 
-        api_client = APIClient('http://192.168.0.80:23333')
+        api_client = APIClient(self.open_api_base)
         self.model_name = api_client.available_models[0]
         print(self.model_name)
         llm = ChatOpenAI(model=self.model_name,
                         temperature = self.temperature,
-                        openai_api_base="http://172.17.0.1:23333/v1",
+                        openai_api_base=self.open_api_base,  # 서버 환경
                         openai_api_key=os.getenv("OPENAI_API_KEY"),
-                        n = self.top_k,
                         top_p = self.top_p,
                         max_tokens = self.max_tokens,
                         verbose=True,
